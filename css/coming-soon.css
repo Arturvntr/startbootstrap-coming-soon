@@ -12,7 +12,7 @@ body {
   height: 100%;
   min-height: 35rem;
   position: relative;
-  font-family: 'Source Sans Pro';
+  font-family: 'xilosa', 'Source Sans Pro';
   font-weight: 300;
 }
 
@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merriweather';
+  font-family: 'xilosa', 'Merriweather';
   font-weight: 700;
 }
 
@@ -32,6 +32,15 @@ img {
   padding-right: 12%;
   height: auto;
   z-index: 0;
+}
+
+
+@font-face {
+  font-family: 'xilosa';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../fonts/xilosa_.ttf");
 }
 
 @media (pointer: coarse) and (hover: none) {
@@ -44,16 +53,94 @@ img {
   }
 }
 
+
+
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../img/bacground.jpg") #cd9557;
+  background: url(../img/NatiArturBG.jpg) #cd9557;
   opacity: 0.7;
   z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.masthead-pages {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  z-index: 2;
+}
+
+.masthead-pages .masthead-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: 35rem;
+  height: 100%;
+  /* background-color: rgba(0, 46, 102, 0.8); */
+  background-color: rgba(134, 133, 132, 0.9);
+  /* transform: skewY(4deg); */
+  /* transform-origin: bottom right; */
+}
+
+.masthead-pages .masthead-content h1 {
+  font-size: 2.5rem;
+}
+
+.masthead-pages .masthead-content p {
+  font-size: 1.2rem;
+}
+
+.masthead-pages .masthead-content p strong {
+  font-weight: 700;
+}
+
+.masthead-pages .masthead-content .input-group-newsletter input {
+  height: auto;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.masthead-pages .masthead-content .input-group-newsletter button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masthead-pages {
+    height: 100%;
+    min-height: 0;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .masthead-pages .masthead-bg {
+    min-height: 0;
+    /* transform: skewX(-8deg); */
+    /* transform: skewX(-40deg);
+    transform-origin: top right; */
+  }
+  .masthead-pages .masthead-content {
+    padding-left: 3rem;
+    padding-right: 10rem;
+  }
+  .masthead-pages .masthead-content h1 {
+    font-size: 3.5rem;
+  }
+  .masthead-pages .masthead-content p {
+    font-size: 1.3rem;
+  }
+}
+
 
 .masthead {
   position: relative;
@@ -71,7 +158,8 @@ img {
   width: 100%;
   min-height: 35rem;
   height: 100%;
-  background-color: rgba(0, 46, 102, 0.8);
+  /* background-color: rgba(0, 46, 102, 0.8); */
+  background-color: rgba(255, 102, 0, 0.9);
   transform: skewY(4deg);
   transform-origin: bottom right;
 }
@@ -111,7 +199,8 @@ img {
   }
   .masthead .masthead-bg {
     min-height: 0;
-    transform: skewX(-8deg);
+    /* transform: skewX(-8deg); */
+    transform: skewX(-40deg);
     transform-origin: top right;
   }
   .masthead .masthead-content {
